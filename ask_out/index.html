@@ -23,13 +23,16 @@
             <button class="btn" id="noButton" onclick="enlargeYes()">No</button>
             
             <script>
+                let scaleFactor = 1; // Facteur d'agrandissement initial
+
                 function nextPage() {
                     window.location.href = "yes.html";
                 }
 
                 function enlargeYes() {
                     const yesButton = document.getElementById('yesButton');
-                    yesButton.style.transform = "scale(1.5)"; // Agrandit le bouton "Yes" de 50%
+                    scaleFactor += 0.5; // 
+                    yesButton.style.transform = `scale(${scaleFactor})`;
                 }
             </script> 
         </div>
